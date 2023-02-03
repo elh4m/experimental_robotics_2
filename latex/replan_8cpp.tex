@@ -1,0 +1,117 @@
+\hypertarget{replan_8cpp}{}\doxysection{erl2/src/replan.cpp File Reference}
+\label{replan_8cpp}\index{erl2/src/replan.cpp@{erl2/src/replan.cpp}}
+
+
+This files contains code for the \textquotesingle{}replan\textquotesingle{} node.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Float64.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$std\+\_\+srvs/\+Empty.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for replan.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{replan_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{replan_8cpp_a6fb13171e953de346d020a07f5a6ec74}{replan\+\_\+srv\+\_\+callback}} (std\+\_\+srvs\+::\+Empty\+::\+Request \&req, std\+\_\+srvs\+::\+Empty\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em A callback function for the \textquotesingle{}/request\+\_\+replan\textquotesingle{} service client. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{replan_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em The main function of the node \textquotesingle{}replan\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{replan_8cpp_ada0eed52fbab009f324452d4dfe0507e}{replan\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Initializing ROS Publisher \textquotesingle{}replan\+\_\+pub\+\_\+\textquotesingle{} variable for \textquotesingle{}\textbackslash{}replan\textquotesingle{} topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains code for the \textquotesingle{}replan\textquotesingle{} node. 
+
+\begin{DoxyAuthor}{Author}
+Elham Mohammadi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+25.\+01.\+2023
+\end{DoxyDate}
+Services \+: ~\newline
+ /request\+\_\+replan
+
+Publishers / Subscribers \+: ~\newline
+ /replan
+
+Description \+:
+
+This node provides the \textquotesingle{}/request\+\_\+replan\textquotesingle{} service which signal the \textquotesingle{}replan\+\_\+sub\textquotesingle{} node to start the replanning process by publishing the string \char`\"{}replan\char`\"{} in the topic \textquotesingle{}replan\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{replan_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{replan_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{replan.cpp@{replan.cpp}!main@{main}}
+\index{main@{main}!replan.cpp@{replan.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+The main function of the node \textquotesingle{}replan\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & an integer arguement ~\newline
+ \\
+\hline
+{\em an} & string double pointer arguement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always return 0 as this function cannot fail.
+\end{DoxyReturn}
+This function initialize the ros node, server for \textquotesingle{}/request\+\_\+replan\textquotesingle{} service and publisher for \textquotesingle{}replan\textquotesingle{} topic. \mbox{\Hypertarget{replan_8cpp_a6fb13171e953de346d020a07f5a6ec74}\label{replan_8cpp_a6fb13171e953de346d020a07f5a6ec74}} 
+\index{replan.cpp@{replan.cpp}!replan\_srv\_callback@{replan\_srv\_callback}}
+\index{replan\_srv\_callback@{replan\_srv\_callback}!replan.cpp@{replan.cpp}}
+\doxysubsubsection{\texorpdfstring{replan\_srv\_callback()}{replan\_srv\_callback()}}
+{\footnotesize\ttfamily bool replan\+\_\+srv\+\_\+callback (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Empty\+::\+Request \&}]{req,  }\item[{std\+\_\+srvs\+::\+Empty\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+A callback function for the \textquotesingle{}/request\+\_\+replan\textquotesingle{} service client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & request arguement of the service \textquotesingle{}/request\+\_\+replan\textquotesingle{} with data type std\+\_\+srvs\+::\+Empty\+::\+Request \\
+\hline
+{\em res} & response arguement of the service \textquotesingle{}/request\+\_\+replan\textquotesingle{} with data type std\+\_\+srvs\+::\+Empty\+::\+Response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a bool variable.
+\end{DoxyReturn}
+This function respond to the client request by publishing the string \char`\"{}replan\char`\"{} in the topic. This will signal the subscriber of the same topic to start replanning by executing \textquotesingle{}rosplan\+\_\+start.\+sh\textquotesingle{} bash file. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{replan_8cpp_ada0eed52fbab009f324452d4dfe0507e}\label{replan_8cpp_ada0eed52fbab009f324452d4dfe0507e}} 
+\index{replan.cpp@{replan.cpp}!replan\_pub\_@{replan\_pub\_}}
+\index{replan\_pub\_@{replan\_pub\_}!replan.cpp@{replan.cpp}}
+\doxysubsubsection{\texorpdfstring{replan\_pub\_}{replan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher replan\+\_\+pub\+\_\+}
+
+
+
+\texorpdfstring{$<$}{<} Initializing ROS Publisher \textquotesingle{}replan\+\_\+pub\+\_\+\textquotesingle{} variable for \textquotesingle{}\textbackslash{}replan\textquotesingle{} topic. 
+

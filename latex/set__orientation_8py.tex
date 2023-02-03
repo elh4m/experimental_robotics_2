@@ -1,0 +1,68 @@
+\hypertarget{set__orientation_8py}{}\doxysection{erl2/scripts/set\+\_\+orientation.py File Reference}
+\label{set__orientation_8py}\index{erl2/scripts/set\_orientation.py@{erl2/scripts/set\_orientation.py}}
+
+
+This file contains code for \doxylink{namespaceset__orientation}{set\+\_\+orientation} node.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceset__orientation}{set\+\_\+orientation}}
+\item 
+namespace \mbox{\hyperlink{namespaceerl2}{erl2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceset__orientation_a818c79b14caa1f150ad60588e2f63da2}{set\+\_\+orientation.\+clbk\+\_\+odom}} (msg)
+\begin{DoxyCompactList}\small\item\em This is a callback function of the subscriber \textquotesingle{}sub\+\_\+odom\textquotesingle{} for the ROS topic \textquotesingle{}/odom\textquotesingle{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceset__orientation_a3aa98eaa6a3808073c5ff3709d684d3c}{set\+\_\+orientation.\+normalize\+\_\+angle}} (angle)
+\begin{DoxyCompactList}\small\item\em This is a function used for normalizing the orientation angle of robot from goal orientation. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceset__orientation_a898ffebdebe68dbaac8b7f53e071e088}{set\+\_\+orientation.\+fix\+\_\+yaw}} (goal)
+\begin{DoxyCompactList}\small\item\em This function adjust the yaw of the robot. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceset__orientation_a3de80419f01edbcf4ef6baed8e5569b0}{set\+\_\+orientation.\+done}} ()
+\begin{DoxyCompactList}\small\item\em This is function makes the angular velocities of robot to zero. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceset__orientation_a601b33b2e8deb0536255d4a8e0389094}{set\+\_\+orientation.\+set\+\_\+orien\+\_\+clbk}} (msg)
+\begin{DoxyCompactList}\small\item\em This is a callback function of \textquotesingle{}request\+\_\+set\+\_\+orientation\textquotesingle{} service. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceset__orientation_a0d5c4a22275688e76caf4ff51bb37ca1}{set\+\_\+orientation.\+main}} ()
+\begin{DoxyCompactList}\small\item\em The main function of the node \textquotesingle{}hint\+\_\+collector\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceset__orientation_a5b3d921e75311dcc896e3dcf05493a93}{set\+\_\+orientation.\+yaw\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em A global variable with datatype \textquotesingle{}int\textquotesingle{} used for storing robot\textquotesingle{}s yaw value. \end{DoxyCompactList}\item 
+math \mbox{\hyperlink{namespaceset__orientation_a6b53ab1a8648b137fb21c8974d2ca00b}{set\+\_\+orientation.\+yaw\+\_\+precision\+\_\+}} = math.\+pi / 9
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float, used as a parameter for robot\textquotesingle{}s yaw precision. \end{DoxyCompactList}\item 
+math \mbox{\hyperlink{namespaceset__orientation_acf47250d153aa553ef3669f10411a15d}{set\+\_\+orientation.\+yaw\+\_\+precision\+\_\+2\+\_\+}} = math.\+pi / 90
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float, also used as a parameter for robot\textquotesingle{}s yaw precision. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespaceset__orientation_a7f07b612046b683954678905fe133008}{set\+\_\+orientation.\+pub}} = None
+\begin{DoxyCompactList}\small\item\em A global variable used for initializing the publisher for topic \textquotesingle{}/cmd\+\_\+vel\textquotesingle{}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceset__orientation_a84252ce27805cef4e284d62b735b9aa7}{set\+\_\+orientation.\+kp\+\_\+a}} = -\/3.\+0
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float used as a parameter for generating robot\textquotesingle{}s new velocities. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceset__orientation_a64479bc4e32c8aefde997c751f112cd8}{set\+\_\+orientation.\+kp\+\_\+d}} = 0.\+2
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float used as a parameter for generating robot\textquotesingle{}s new velocities. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceset__orientation_a5e07bc8436886b131dd66ca5ad288f90}{set\+\_\+orientation.\+ub\+\_\+a}} = 0.\+6
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float used as a parameter for generating robot\textquotesingle{}s new velocities. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceset__orientation_a038bb5c396ca07b2de5f63f32af743ab}{set\+\_\+orientation.\+lb\+\_\+a}} = -\/0.\+5
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float used as a parameter for generating robot\textquotesingle{}s new velocities. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceset__orientation_aa7bad7d08b86229ba539a8de17ff0641}{set\+\_\+orientation.\+ub\+\_\+d}} = 0.\+6
+\begin{DoxyCompactList}\small\item\em A global variable with datatype float used as a parameter for generating robot\textquotesingle{}s new velocities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains code for \doxylink{namespaceset__orientation}{set\+\_\+orientation} node. 
+
+\begin{DoxyAuthor}{Author}
+Elham Mohammadi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+25.\+01.\+2023
+\end{DoxyDate}
+Service \+: ~\newline
+ ° /armor\+\_\+interface\+\_\+srv ° /oracle\+\_\+service
+
+This node recieves the desired orientation goal coordinate as a \textquotesingle{}/request\+\_\+set\+\_\+orientation\textquotesingle{} service request from the \textquotesingle{}my\+\_\+action\textquotesingle{} node. Based on the recieved goal coordinates it computes the required angular velocity of the robot to reach the desired orientation and then publishes it in \textquotesingle{}cmd\+\_\+vel\textquotesingle{} topic. 

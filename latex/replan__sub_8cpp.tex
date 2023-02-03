@@ -1,0 +1,88 @@
+\hypertarget{replan__sub_8cpp}{}\doxysection{erl2/src/replan\+\_\+sub.cpp File Reference}
+\label{replan__sub_8cpp}\index{erl2/src/replan\_sub.cpp@{erl2/src/replan\_sub.cpp}}
+
+
+This files contains code for the \textquotesingle{}replan\+\_\+sub\textquotesingle{} node.  
+
+
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for replan\+\_\+sub.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{replan__sub_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{replan__sub_8cpp_a2b5079c99d941b6a9046bf5ced97209e}{replan\+\_\+callback}} (const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em A callback function for the \textquotesingle{}replan\textquotesingle{} topic subscriber. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{replan__sub_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em The main function of the node \textquotesingle{}replan\+\_\+sub\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains code for the \textquotesingle{}replan\+\_\+sub\textquotesingle{} node. 
+
+\begin{DoxyAuthor}{Author}
+Elham Mohammadi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+25.\+01.\+2023
+\end{DoxyDate}
+Publishers / Subscribers \+: ~\newline
+ /replan
+
+Description \+:
+
+This node initializes a subscriber for \textquotesingle{}/replan\textquotesingle{} topic. The callback funtion of this subscriber execute the \textquotesingle{}rosplan\+\_\+start.\+sh\textquotesingle{} bash file and starts the replanning. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{replan__sub_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{replan__sub_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{replan\_sub.cpp@{replan\_sub.cpp}!main@{main}}
+\index{main@{main}!replan\_sub.cpp@{replan\_sub.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+The main function of the node \textquotesingle{}replan\+\_\+sub\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & an integer arguement ~\newline
+ \\
+\hline
+{\em an} & string double pointer arguement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always return 0 as this function cannot fail.
+\end{DoxyReturn}
+This function initialize the ros node and subscriber for \textquotesingle{}replan\textquotesingle{} topic. \mbox{\Hypertarget{replan__sub_8cpp_a2b5079c99d941b6a9046bf5ced97209e}\label{replan__sub_8cpp_a2b5079c99d941b6a9046bf5ced97209e}} 
+\index{replan\_sub.cpp@{replan\_sub.cpp}!replan\_callback@{replan\_callback}}
+\index{replan\_callback@{replan\_callback}!replan\_sub.cpp@{replan\_sub.cpp}}
+\doxysubsubsection{\texorpdfstring{replan\_callback()}{replan\_callback()}}
+{\footnotesize\ttfamily void replan\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+A callback function for the \textquotesingle{}replan\textquotesingle{} topic subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & takes std\+\_\+msgs\+::\+String as arguement which is the type of the \char`\"{}replan\char`\"{} topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none (function type is void)
+\end{DoxyReturn}
+This function starts the replanning process by executing \textquotesingle{}rosplan\+\_\+start.\+sh\textquotesingle{} bash file. 

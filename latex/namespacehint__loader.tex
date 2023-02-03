@@ -1,0 +1,152 @@
+\hypertarget{namespacehint__loader}{}\doxysection{hint\+\_\+loader Namespace Reference}
+\label{namespacehint__loader}\index{hint\_loader@{hint\_loader}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacehint__loader_a83d50920bc0ca9871b83a73c052908ec}{clbk\+\_\+oracle\+\_\+service}} (msg)
+\begin{DoxyCompactList}\small\item\em This is a \textquotesingle{}clbk\+\_\+oracle\+\_\+service\textquotesingle{} function of oracle node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint__loader_ab14cefc5c3135e795f7c31ff6fb39615}{main}} ()
+\begin{DoxyCompactList}\small\item\em This is a \textquotesingle{}main\textquotesingle{} function of oracle node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{namespacehint__loader_a2ea9756e9de173a4d7f9cd2f9acaaa8a}{oracle\+\_\+client\+\_\+}} = None
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}oracle\+\_\+client\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/oracle\+\_\+solution\textquotesingle{} service client. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespacehint__loader_ac98c3b381d9775a22e5b86d7650b5c3e}{armor\+\_\+client\+\_\+}} = None
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}armor\+\_\+client\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/armor\+\_\+interface\+\_\+srv\textquotesingle{} service client. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{namespacehint__loader_ac2fdc2543b93d72c921298e0f7b07652}{armor\+\_\+req\+\_\+}} = None
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}armor\+\_\+req\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/armor\+\_\+interface\+\_\+srv\textquotesingle{} service request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacehint__loader_a83ec0da45349e3e1d46356ead80d5b0e}{count\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}count\+\_\+\textquotesingle{} with \textquotesingle{}0\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacehint__loader_a52bb0a682d81cdb843af9b1aa06499a7}{prev\+\_\+comp\+\_\+hypo\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}prev\+\_\+comp\+\_\+hypo\+\_\+\textquotesingle{} with \textquotesingle{}0\textquotesingle{}. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespacehint__loader_acbbd28c1476d37eb2aef3c32df7495d5}{who\+\_\+}} = \char`\"{}none\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}who\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespacehint__loader_a86a810f151cba4e436551229e03c83ed}{where\+\_\+}} = \char`\"{}none\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}where\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{namespacehint__loader_a6f76d070300d24d844751eb8596b1e5a}{what\+\_\+}} = \char`\"{}none\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}where\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacehint__loader_a8ffcf8badce28969d9e725b66f021d69}{ID\+\_\+}} = -\/1
+\begin{DoxyCompactList}\small\item\em Initializing global variable \textquotesingle{}ID\+\_\+\textquotesingle{} with \textquotesingle{}-\/1\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehint__loader_a83d50920bc0ca9871b83a73c052908ec}\label{namespacehint__loader_a83d50920bc0ca9871b83a73c052908ec}} 
+\index{hint\_loader@{hint\_loader}!clbk\_oracle\_service@{clbk\_oracle\_service}}
+\index{clbk\_oracle\_service@{clbk\_oracle\_service}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{clbk\_oracle\_service()}{clbk\_oracle\_service()}}
+{\footnotesize\ttfamily def hint\+\_\+loader.\+clbk\+\_\+oracle\+\_\+service (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+This is a \textquotesingle{}clbk\+\_\+oracle\+\_\+service\textquotesingle{} function of oracle node. 
+
+\begin{DoxyReturn}{Returns}
+Bool
+\end{DoxyReturn}
+This function is a callback function of \textquotesingle{}/oracle\+\_\+service\textquotesingle{} node. It waits for \textquotesingle{}/oracle\+\_\+service\textquotesingle{} service request from the \textquotesingle{}motion\+\_\+controller\textquotesingle{} node. Based on the type of recieved request, it loads the hint in the ARMOR reasonser, start the reasoner to deduced a hypotheses based on previously loaded hints and request ARMOR reasoner for the list of \textquotesingle{}COMPLETE\textquotesingle{} hypotheses. If the hypotheses is \textquotesingle{}CONSISTENT\textquotesingle{} it respond with \textquotesingle{}True\textquotesingle{} otherwise it respond with \textquotesingle{}False\textquotesingle{}. Similarly if the hypotheses is \textquotesingle{}CONSISTENT\textquotesingle{} then the user request this node to check if the hypotheses is also \textquotesingle{}CORRECT\textquotesingle{}. A hypotheses correct if it is \textquotesingle{}CONSISTENT\textquotesingle{} and belong to a predefined list of correct hypotheses in this node. If hypotheses is also correct then the node respond back with \textquotesingle{}True\textquotesingle{} otherewise \textquotesingle{}False\textquotesingle{}. \mbox{\Hypertarget{namespacehint__loader_ab14cefc5c3135e795f7c31ff6fb39615}\label{namespacehint__loader_ab14cefc5c3135e795f7c31ff6fb39615}} 
+\index{hint\_loader@{hint\_loader}!main@{main}}
+\index{main@{main}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def hint\+\_\+loader.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is a \textquotesingle{}main\textquotesingle{} function of oracle node. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}none\mbox{]}.
+\end{DoxyReturn}
+This is a \textquotesingle{}main\textquotesingle{} function of \textquotesingle{}hind\+\_\+loader\textquotesingle{} node. It initializes service clients for \textquotesingle{}/armor\+\_\+interface\+\_\+srv\textquotesingle{} and \textquotesingle{}/oracle\+\_\+solution\textquotesingle{} services. It also initializes \textquotesingle{}/hint\+\_\+loader\+\_\+service\textquotesingle{} service server. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacehint__loader_ac98c3b381d9775a22e5b86d7650b5c3e}\label{namespacehint__loader_ac98c3b381d9775a22e5b86d7650b5c3e}} 
+\index{hint\_loader@{hint\_loader}!armor\_client\_@{armor\_client\_}}
+\index{armor\_client\_@{armor\_client\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{armor\_client\_}{armor\_client\_}}
+{\footnotesize\ttfamily None hint\+\_\+loader.\+armor\+\_\+client\+\_\+ = None}
+
+
+
+Initializing global variable \textquotesingle{}armor\+\_\+client\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/armor\+\_\+interface\+\_\+srv\textquotesingle{} service client. 
+
+\mbox{\Hypertarget{namespacehint__loader_ac2fdc2543b93d72c921298e0f7b07652}\label{namespacehint__loader_ac2fdc2543b93d72c921298e0f7b07652}} 
+\index{hint\_loader@{hint\_loader}!armor\_req\_@{armor\_req\_}}
+\index{armor\_req\_@{armor\_req\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{armor\_req\_}{armor\_req\_}}
+{\footnotesize\ttfamily None hint\+\_\+loader.\+armor\+\_\+req\+\_\+ = None}
+
+
+
+Initializing global variable \textquotesingle{}armor\+\_\+req\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/armor\+\_\+interface\+\_\+srv\textquotesingle{} service request. 
+
+\mbox{\Hypertarget{namespacehint__loader_a83ec0da45349e3e1d46356ead80d5b0e}\label{namespacehint__loader_a83ec0da45349e3e1d46356ead80d5b0e}} 
+\index{hint\_loader@{hint\_loader}!count\_@{count\_}}
+\index{count\_@{count\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{count\_}{count\_}}
+{\footnotesize\ttfamily int hint\+\_\+loader.\+count\+\_\+ = 0}
+
+
+
+Initializing global variable \textquotesingle{}count\+\_\+\textquotesingle{} with \textquotesingle{}0\textquotesingle{}. 
+
+\mbox{\Hypertarget{namespacehint__loader_a8ffcf8badce28969d9e725b66f021d69}\label{namespacehint__loader_a8ffcf8badce28969d9e725b66f021d69}} 
+\index{hint\_loader@{hint\_loader}!ID\_@{ID\_}}
+\index{ID\_@{ID\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{ID\_}{ID\_}}
+{\footnotesize\ttfamily int hint\+\_\+loader.\+ID\+\_\+ = -\/1}
+
+
+
+Initializing global variable \textquotesingle{}ID\+\_\+\textquotesingle{} with \textquotesingle{}-\/1\textquotesingle{}. 
+
+\mbox{\Hypertarget{namespacehint__loader_a2ea9756e9de173a4d7f9cd2f9acaaa8a}\label{namespacehint__loader_a2ea9756e9de173a4d7f9cd2f9acaaa8a}} 
+\index{hint\_loader@{hint\_loader}!oracle\_client\_@{oracle\_client\_}}
+\index{oracle\_client\_@{oracle\_client\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{oracle\_client\_}{oracle\_client\_}}
+{\footnotesize\ttfamily None hint\+\_\+loader.\+oracle\+\_\+client\+\_\+ = None}
+
+
+
+Initializing global variable \textquotesingle{}oracle\+\_\+client\+\_\+\textquotesingle{} with \textquotesingle{}None\textquotesingle{} for \textquotesingle{}/oracle\+\_\+solution\textquotesingle{} service client. 
+
+\mbox{\Hypertarget{namespacehint__loader_a52bb0a682d81cdb843af9b1aa06499a7}\label{namespacehint__loader_a52bb0a682d81cdb843af9b1aa06499a7}} 
+\index{hint\_loader@{hint\_loader}!prev\_comp\_hypo\_@{prev\_comp\_hypo\_}}
+\index{prev\_comp\_hypo\_@{prev\_comp\_hypo\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{prev\_comp\_hypo\_}{prev\_comp\_hypo\_}}
+{\footnotesize\ttfamily int hint\+\_\+loader.\+prev\+\_\+comp\+\_\+hypo\+\_\+ = 0}
+
+
+
+Initializing global variable \textquotesingle{}prev\+\_\+comp\+\_\+hypo\+\_\+\textquotesingle{} with \textquotesingle{}0\textquotesingle{}. 
+
+\mbox{\Hypertarget{namespacehint__loader_a6f76d070300d24d844751eb8596b1e5a}\label{namespacehint__loader_a6f76d070300d24d844751eb8596b1e5a}} 
+\index{hint\_loader@{hint\_loader}!what\_@{what\_}}
+\index{what\_@{what\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{what\_}{what\_}}
+{\footnotesize\ttfamily str hint\+\_\+loader.\+what\+\_\+ = \char`\"{}none\char`\"{}}
+
+
+
+Initializing global variable \textquotesingle{}where\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. 
+
+\mbox{\Hypertarget{namespacehint__loader_a86a810f151cba4e436551229e03c83ed}\label{namespacehint__loader_a86a810f151cba4e436551229e03c83ed}} 
+\index{hint\_loader@{hint\_loader}!where\_@{where\_}}
+\index{where\_@{where\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{where\_}{where\_}}
+{\footnotesize\ttfamily str hint\+\_\+loader.\+where\+\_\+ = \char`\"{}none\char`\"{}}
+
+
+
+Initializing global variable \textquotesingle{}where\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. 
+
+\mbox{\Hypertarget{namespacehint__loader_acbbd28c1476d37eb2aef3c32df7495d5}\label{namespacehint__loader_acbbd28c1476d37eb2aef3c32df7495d5}} 
+\index{hint\_loader@{hint\_loader}!who\_@{who\_}}
+\index{who\_@{who\_}!hint\_loader@{hint\_loader}}
+\doxysubsubsection{\texorpdfstring{who\_}{who\_}}
+{\footnotesize\ttfamily str hint\+\_\+loader.\+who\+\_\+ = \char`\"{}none\char`\"{}}
+
+
+
+Initializing global variable \textquotesingle{}who\+\_\+\textquotesingle{} with \textquotesingle{}none\textquotesingle{}. 
+
