@@ -2,9 +2,7 @@
 This project is an extention of the work done in the assignment 1 of the experimental robotics course which can be found here:https://github.com/elh4m/exprimental_robotics_1 . In the previous project, a ROS package was developed for a toy simulation of Clauedo game in which a robot explore the environment to collect hints and deduced an hypothesis about who can be the killer. 
 
 Building upon this architectural theme, the project contains some environment simulation and task-motion planning level upgrades. For environment simulation we have developed a scene in Gazebo simulator which contains a custom made robot model with an arm attached to its base. There are four hovering points (x,y,z) in the environment with the following 'x' and 'y' coordinates (-3,0), (3,0), (0,-3), (0,3) while the position of 'z' coordinate may be either 0.75 or 1.25 which is chosen randomly everytime. These four points depicts the locations of the four rooms where robot needs to place its arm's end-effector in order to collect the hints. 
-
-
-
+<img width="297" alt="path" src="https://user-images.githubusercontent.com/77781922/216706427-fdb70f0c-62c2-40d3-918e-36833f179c82.png">
 Besides this there are small walls in the simulation environment which can been seen in the above picture. These walls restraint the robot to reach the points coordinates with its mobile base, therefore robot plan its arm motion to placed it over the point coordinates in order to collect the hints. Similar to the previous project the deduced hypotheses has to be consistent and correct which means it has to be based on three different types of hints and its ID needs to match the ID of the correct hypotheses. The hnts are of following types:
 
 1. who: Robot can find a name of a person as a hint which can be a killer e.g: Prof. Plum.
@@ -12,7 +10,9 @@ Besides this there are small walls in the simulation environment which can been 
 3. where: Robot can find a name of random place where the crime might have been committed e.g: Hall.
 
 Statement of a consistent hypothesis will be something like this: “Prof. Plum with the Dagger in the Hall”. Incase the deduced hypotheses is wrong then the robot will visit the rooms again for new hints until it forms a consistent hypotheses. Similar to the previous project, ARMOR package has been used to deduced the hypothesis which is developed by researchers at University of Genova. ARMOR is versatile management system that can handle single or multiple-ontology archetectures under ROS. Please find more details regarding ARMOR from here: https://github.com/EmaroLab/armor
-
+ 
+ 
+ 
 In addition to this, we have also used ROSPlan to plan the behaviour of the our robot. ROSPlan is a framework which provides collection of tools for AI Planning in a ROS system. Its variety of nodes encapsulate planning, problem generation, and plan execution in itself. In order to used ROSPlan, problem statement of the project that we diccussed above has been translated into PDDL problem file which contains the required objects like 'robot' and 'waypoint', initial condition and goals which describe the final desire state of the environment and domain file which contains the actions that robot can opt for in order to achieve the goal like 'goto_waypoint'. At the start of the simulation we execute the planning loop services of the ROSPlan which includes problem generation, planning, parsing and dispatching. During the execution of the simulation its very likely that the robot will fail to complete the goals in the first attempt. Therefore, the archieture of the project is developed in the way that can sense the failure duiring execution and goes into replaning. After replanning, the robot starts the execution of the new plan and it keeps doing it until the goals are achieved.
 
 ## Project Installation:
