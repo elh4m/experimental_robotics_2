@@ -1,5 +1,5 @@
 # Project 2 - Experimental Robotics (MSc Robotics Engineering, Unige)
-This project is an extention of the work done in the assignment 1 of the experimental robotics course which can be found here: https://github.com/ShozabAbidi10/experimental_robotics_1. In the previous project, a ROS package was developed for a toy simulation of Clauedo game in which a robot explore the environment to collect hints and deduced an hypothesis about who can be the killer. 
+This project is an extention of the work done in the assignment 1 of the experimental robotics course which can be found here:https://github.com/elh4m/exprimental_robotics_1 . In the previous project, a ROS package was developed for a toy simulation of Clauedo game in which a robot explore the environment to collect hints and deduced an hypothesis about who can be the killer. 
 
 Building upon this architectural theme, the project contains some environment simulation and task-motion planning level upgrades. For environment simulation we have developed a scene in Gazebo simulator which contains a custom made robot model with an arm attached to its base. There are four hovering points (x,y,z) in the environment with the following 'x' and 'y' coordinates (-3,0), (3,0), (0,-3), (0,3) while the position of 'z' coordinate may be either 0.75 or 1.25 which is chosen randomly everytime. These four points depicts the locations of the four rooms where robot needs to place its arm's end-effector in order to collect the hints. 
 
@@ -106,4 +106,5 @@ This node recieves the desired orientation goal coordinate as a '/request_set_or
 The code documentation is done using Doxygen tool. Please find the doxygen documentation in the **main** branch .
 
 ## Contant Info: 
-1. Author: Shozab Abidi
+1. Author: Elham Mohammadi
+2.Email:elhmohamadii@gmail.com
