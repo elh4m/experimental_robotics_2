@@ -101,10 +101,7 @@ This node recieves the desired orientation goal coordinate as a '/request_set_or
 
 ## Project Simulation Demo:
 
-
-
-https://user-images.githubusercontent.com/77781922/216773125-6d4db6b7-5918-43e1-9fb6-2123fe8f4b0d.mp4
-
+https://user-images.githubusercontent.com/77781922/216773540-96a29e3e-dd13-4fc1-8c9c-963b4556fab3.mp4
 
 
 ## Code Documentation:
