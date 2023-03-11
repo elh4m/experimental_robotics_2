@@ -473,7 +473,7 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "hint_collector");
   ros::NodeHandle n;
-  ros::Subscriber sub = n.subscribe("/oracle_hint", 10, oracle_hint_Callback);
+  ros::Subscriber sub = n.subscribe("/oracle_hint", 10, oracle_hint_Callback);#subscribing to the oracle_hint topic to gather hints as they are being published
   ros::ServiceServer service = n.advertiseService("request_hint_collector", collect_hint);
   hint_loader_client = n.serviceClient<erl2::HintLoader>("hint_loader_service");
   std::cout << "'request_hint_collector' service is live.." << std::endl;
