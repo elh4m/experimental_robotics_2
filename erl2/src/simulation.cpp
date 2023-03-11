@@ -33,6 +33,7 @@ double distfromtarget (double x, double y, double z, double x1, double y1, doubl
 	
 }
 
+#requesting a trustable ID from oracle_solution service
 bool oracleService(erl2::Oracle::Request &req, erl2::Oracle::Response &res)
 	{
 		res.ID = winID;
@@ -104,7 +105,7 @@ int main(int argc, char **argv)
 ros::init(argc, argv, "assignment2");
 ros::NodeHandle nh;
 ros::Publisher vis_pub = nh.advertise<visualization_msgs::MarkerArray>( "/visualization_marker", 0 );
-oracle_pub = nh.advertise<erl2::ErlOracle>( "/oracle_hint", 0 );
+oracle_pub = nh.advertise<erl2::ErlOracle>( "/oracle_hint", 0 );#the generated hints will be published to the topic oracle_hint
 ros::ServiceServer service= nh.advertiseService("/oracle_solution", oracleService);
 ros::Subscriber sub = nh.subscribe("/gazebo/link_states", 10, oracleCallback);
 visualization_msgs::MarkerArray markers;
