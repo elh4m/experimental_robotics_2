@@ -20,9 +20,13 @@
 *  
 * Description :
 *
-* This node implements the action client and task the robot in the Gazebo simulation to visit all waypoints (wp1,wp2,wp3,wp4). When the robot reached a waypoint location then this node
-* call the service 'request_set_orientation' to set robot in appropiate orientation to move its arm suitably. Once this is done then robot ask to move its arm 
-* using the service 'request_move_arm' and collect hints. If hint(s) collected successfully then the service returns 'true' and robot continue visiting other waypoints. 
+* This node implements the action client and tasks of the robot in the Gazebo simulation to visit all waypoints (wp1,wp2,wp3,wp4).
+* When the robot reached a waypoint location then this node
+* call the service 'request_set_orientation' to set robot in appropiate orientation to move its arm suitably. 
+* Once this is done then robot ask to move its arm 
+* using the service 'request_move_arm' and collect hints. 
+* After this it calls the '/request_hint_collector' service to collect the hints
+* If hint(s) collected successfully then the service returns 'true' and robot continue visiting other waypoints. 
 */
 
 #include "erl2/my_action.h"
@@ -65,7 +69,7 @@ namespace KCL_rosplan
 	* \param msg tasks arguement of type 'rosplan_dispatch_msgs::ActionDispatch'
 	* \return returns a bool value based on the outcome of the assigned task to the action server.
 	*
-	* This function works has a callback for the 'goto_waypoint' action in PDDL domain file. During the dispatching of the plan, this
+	* This function works as a callback for the 'goto_waypoint' action in PDDL domain file. During the dispatching of the plan, this
 	* function get triggers with the occurance of 'goto_waypoint' action. It contains the low-level controller implementation of 
 	* 'goto_waypoint' action which made the robot in the Gazebo simulation move from one waypoint to another using a action service. 
 	* Once the robot has reach its desired waypoint location, it calls two services 'request_set_orientation' and 'request_move_arm' to 
