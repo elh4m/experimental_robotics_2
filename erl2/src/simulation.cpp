@@ -40,6 +40,17 @@ bool oracleService(erl2::Oracle::Request &req, erl2::Oracle::Response &res)
 		return true;
 	}
 
+
+
+//the callback function oracleCallback is called whenever a new message of type gazebo_msgs::LinkStates is received.
+//For each "cluedo_link" found, the function computes the distance from the link's position to one of four predefined target positions,
+//specified by markx, marky, and markz vectors.
+//If the distance is less than 0.25 and the target position has changed since the last iteration,
+//the function generates a new message of type erl2::ErlOracle and publishes it on a ROS topic called oracle_hint.
+//The content of the messages is determined randomly, with some restrictions on uniqueness of the ID and value fields.
+
+
+//
 void oracleCallback(const gazebo_msgs::LinkStates::ConstPtr& msg)
 {
    for(int i=0; i< msg->name.size(); i++){
