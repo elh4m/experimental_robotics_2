@@ -106,7 +106,7 @@ ros::init(argc, argv, "assignment2");
 ros::NodeHandle nh;
 ros::Publisher vis_pub = nh.advertise<visualization_msgs::MarkerArray>( "/visualization_marker", 0 );
 oracle_pub = nh.advertise<erl2::ErlOracle>( "/oracle_hint", 0 );#the generated hints will be published to the topic oracle_hint
-ros::ServiceServer service= nh.advertiseService("/oracle_solution", oracleService);
+ros::ServiceServer service= nh.advertiseService("/oracle_solution", oracleService);#The trustable ID can be requested from the oracle_solution service
 ros::Subscriber sub = nh.subscribe("/gazebo/link_states", 10, oracleCallback);
 visualization_msgs::MarkerArray markers;
 srand (time(NULL));
