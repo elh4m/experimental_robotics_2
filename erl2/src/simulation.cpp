@@ -170,6 +170,10 @@ marker.pose.position.z = zpos[RandIndex];
 markz[3]=marker.pose.position.z;
 markers.markers.push_back(marker);
 
+// The code uses an array called uIDs to store the previously generated IDs
+// and a for loop to generate a new ID up to 4 times. It ensures that each new ID
+// generated is unique by checking if it has already been generated before. If so,
+// the loop generates a new ID until a unique one is found.
 int uid;
 for (int i = 0; i < 4; i++){	
 	do{
